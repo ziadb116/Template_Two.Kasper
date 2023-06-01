@@ -1,0 +1,107 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --sec-padding: 100px;
+}
+.portfolio-sec {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+/* ========== gallery ============ */
+
+/* ========== start shuffle ul ============ */
+.container ul.shuffle {
+  display: flex;
+  justify-content: center;
+}
+.container ul.shuffle li {
+  padding: 10px;
+}
+.container ul.shuffle li:hover,
+.container ul.shuffle li.active {
+  background-color: var(--hover-color);
+  color: white;
+  cursor: pointer;
+}
+/* ========== end ul ============ */
+
+/* ========== start gallery ============ */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.gallery-container .photo-box {
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .gallery-container .photo-box {
+    flex-basis: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .gallery-container .photo-box {
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 1200px) {
+  .gallery-container .photo-box {
+    flex-basis: 25%;
+  }
+}
+.gallery-container .photo-box img {
+  max-width: 100%;
+  transition: 0.5s;
+}
+.gallery-container .photo-box:hover img {
+  transform: rotate(3deg) scale(1.2);
+}
+.gallery-container .photo-box .box-text {
+  background-color: var(--secodary-background);
+  color: var(--main-text-color);
+  transition: 0.5s;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  bottom: -100%;
+}
+
+.gallery-container .photo-box:hover .box-text {
+  bottom: 0;
+}
+
+.gallery-container .photo-box .box-text h4 {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.gallery-container .photo-box .box-text p {
+  color: var(--hover-color);
+}
+
+/* ========== end gallery ============ */
+
+a.more {
+  text-transform: uppercase;
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 15px 30px;
+  color: var(--hover-color);
+  border: solid 2px var(--main-text-color);
+  border-radius: 20px;
+}
+
+a.more:hover {
+  background-color: var(--hover-color);
+  color: white;
+  border-color: var(--hover-color);
+  cursor: pointer;
+}

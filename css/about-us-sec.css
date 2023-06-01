@@ -1,0 +1,29 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --sec-padding: 100px;
+}
+.about-us-sec {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  overflow: hidden;
+  text-align: center;
+}
+.about-us-sec .about-imge {
+  max-width: 100%;
+  position: relative;
+  bottom: -200px;
+  margin-top: -200px;
+}
+
+@media (max-width: 767px) {
+  .about-us-sec .about-imge {
+    bottom: -160px;
+    margin-top: -160px;
+  }
+}

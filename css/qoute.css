@@ -1,0 +1,51 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --sec-padding: 100px;
+}
+
+.qoute {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-image: url(../assets/quote.jpg);
+  background-size: cover;
+  position: relative;
+}
+.qoute::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 60%);
+}
+
+.qoute .container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+.qoute .container q {
+  display: block;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+.qoute .container q:before {
+  content: "\f10d";
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+.qoute .container q:after {
+  display: block;
+  content: "\f10e";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}

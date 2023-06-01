@@ -1,0 +1,100 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --sec-padding: 100px;
+}
+.contact-us-sec {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+.contact-content form {
+  flex-basis: 70%;
+}
+.contact-content form input {
+  display: block;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: var(--hover-color) solid 1px;
+  width: 100%;
+  caret-color: var(--hover-color);
+}
+.contact-content form textarea {
+  border: var(--hover-color) solid 1px;
+  display: block;
+  margin-bottom: 30px;
+  padding: 20px;
+  height: 200px;
+  width: 100%;
+  caret-color: var(--hover-color);
+}
+.contact-content form input:focus,
+.contact-content form textarea:focus {
+  outline: none;
+}
+.contact-content form input[type="submit"] {
+  display: block;
+  color: var(--main-text-color);
+  background-color: transparent;
+  margin: 30px auto;
+  width: 200px;
+  border: var(--hover-color) solid 1px;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+.contact-content form input[type="submit"]:hover {
+  color: white;
+  background-color: var(--hover-color);
+}
+/* ========= */
+.contact-content .contact-text {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .contact-content .contact-text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    order: -1;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.contact-content .contact-numbers {
+  margin-bottom: 50px;
+}
+.contact-content .contact-numbers h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-content .contact-numbers p {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-content .contact-address h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-content .contact-address address {
+  font-weight: normal;
+  line-height: 2;
+}

@@ -1,0 +1,127 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #e6e6e6;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --sec-padding: 100px;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 97px;
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: calc(100% - 30px);
+  height: 1px;
+  background-color: white;
+}
+@media (max-width: 767px) {
+  header .container::after {
+    display: none;
+  }
+}
+
+header .container .logo {
+  max-width: 100%;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+header .container nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header .container nav .toggle-menu {
+    display: none;
+  }
+}
+
+header .container nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  header .container nav ul {
+    display: none;
+  }
+
+  header .container nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(0 0 0 / 50%);
+  }
+  header .container nav ul li {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--hover-color);
+  }
+}
+
+header .container nav ul li a {
+  color: white;
+  display: block;
+  padding: 10px;
+  z-index: 2;
+  font-size: 14px;
+  transition: 0.5s;
+  position: relative;
+}
+
+header .container nav ul li a:hover::after {
+  content: "";
+  transition: 0.5s;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  z-index: 1;
+  width: 90%;
+  height: 6px;
+  background-color: var(--hover-color);
+}
+header .container nav ul li a:hover {
+  color: var(--hover-color);
+}
+
+header .container nav .form {
+  width: 40px;
+
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+header .container nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}

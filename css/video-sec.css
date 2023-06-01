@@ -1,0 +1,72 @@
+.video-sec {
+  position: relative;
+}
+.video-sec::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 40%);
+}
+
+video {
+  width: 100%;
+}
+
+.video-text {
+  padding: 50px;
+  color: white;
+  background-color: var(--transparent-color);
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .video-text {
+    height: 80%;
+    padding: 40px;
+  }
+}
+.video-text h3 {
+  font-weight: normal;
+  margin: 0 0 30px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .video-text h3 {
+    margin-bottom: 15px;
+  }
+}
+.video-text p {
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .video-text p {
+    margin-bottom: 15px;
+  }
+}
+.video-text .btn-see {
+  color: white;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  border-radius: 20px;
+  background-color: black;
+
+  border: none;
+}
+.video-text .btn-see:hover {
+  background-color: var(--hover-color);
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .video-text .btn-see {
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,55 @@
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --sec-padding: 100px;
+}
+.services-sec {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+}
+
+.services-sec .container .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  row-gap: 30px;
+  column-gap: 30px;
+}
+
+.services-sec .container .services-content .services-box {
+  display: flex;
+}
+@media (max-width: 767px) {
+  .services-sec .container .services-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-sec .container .services-content .services-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.services-sec .container .services-content .services-box i {
+  margin-right: 30px;
+}
+@media (max-width: 767px) {
+  .services-sec .container .services-content .services-box i {
+    margin-bottom: 30px;
+  }
+}
+.services-sec .container .services-content .services-box .box-text h3 {
+  color: var(--hover-color);
+  padding-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .services-sec .container .services-content .services-box .box-text {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}

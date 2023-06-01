@@ -1,0 +1,137 @@
+/*-======== start import files ========-*/
+/* footer file */
+@import url(./footer.css);
+/* contact-us-sec file */
+@import url(./contact-us-sec.css);
+/* subscribe-sec file */
+@import url(./subscribe-sec.css);
+/* pricing-sec file */
+@import url(./pricing-sec.css);
+/* users-opinion file */
+@import url(./qoute.css);
+/* users-opinion file */
+@import url(./skills-opinons.css);
+/* status-sec file */
+@import url(./status-sec.css);
+/* about-us-sec file */
+@import url(./about-us-sec.css);
+/* video-sec file */
+@import url(./video-sec.css);
+/* portfolio-sec file */
+@import url(./portfolio-sec.css);
+/* design file */
+@import url(./design-sec.css);
+/* services file */
+@import url(./services-sec.css);
+/* header file */
+@import url(./landing-sec.css);
+/* header file */
+@import url(./header.css);
+/* normalize file */
+@import url(./normalize.css);
+/* font awesome  */
+@import url(./all.min.css);
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@700&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap");
+/*-======== end import files ========-*/
+:root {
+  --main-text-color: #545b6b;
+  --secondary-text-color: #777;
+  --hover-color: #00e1ff;
+  --special-color: #6599ff;
+  --main-background: #eee;
+  --secodary-background: white;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --sec-padding: 100px;
+}
+/* start component */
+.special-heading {
+  text-align: center;
+}
+.special-heading h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 70px;
+  position: relative;
+}
+.special-heading h2::before {
+  content: "";
+  bottom: -30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 2px;
+  background-color: var(--main-text-color);
+}
+.special-heading h2::after {
+  content: "";
+  bottom: -40px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border: solid 1px var(--main-text-color);
+  border-radius: 50%;
+  background-color: white;
+}
+.special-heading h2 + p {
+  color: var(--secondary-text-color);
+  width: 550px;
+  margin: 0 auto 100px;
+  max-width: 100%;
+  line-height: 2;
+  text-align: center;
+}
+/* end component */
+/* start global rules */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: var(--hover-color);
+  color: white;
+}
+/* end global rules */
+
+/* -============= maincontainer =============- */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200) {
+  .container {
+    width: 1170px;
+  }
+}
