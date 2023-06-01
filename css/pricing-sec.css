@@ -15,13 +15,29 @@
 }
 /* ======================== */
 .plan-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .plan-content .plan-box {
   text-align: center;
+  margin-right: 20px;
 }
+@media (max-width: 767px) {
+  .plan-content .plan-box {
+    flex-basis: calc(100% - 20px);
+  }
+}
+@media (min-width: 768px) {
+  .plan-content .plan-box {
+    flex-basis: calc(50% - 20px);
+  }
+}
+@media (min-width: 1200px) {
+  .plan-content .plan-box {
+    flex-basis: calc(25% - 20px);
+  }
+}
+
 .plan-content .plan-box .box-head {
   padding: 40px 20px;
   border-top: 1px solid var(--hover-color);
